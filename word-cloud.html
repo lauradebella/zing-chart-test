@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    </head>
+    <body>
+        <div id="myChart"></div>
+        <script type="text/javascript">
+            zingchart.THEME="classic";
+             
+            var myConfig = {
+                "background-color":"#ffffff",
+                "graphset":[
+                    {
+                        "type":"wordcloud",
+                        "x":"0%",
+                        "y":"0%",
+                        "width":"50%",
+                        "height":"100%",
+                        "background-color":"#F2F3F8",
+                        "title":{
+                            "text":"Pontos Fortes",
+                            "y":"5%",
+                            "background-color":"none",
+                            "font-size":"16px",
+                            "font-color":"#000000"
+                        },
+                        "subtitle":{
+                            "text":"Segundos os questionários",
+                            "y":"12%",
+                            "background-color":"none",
+                            "font-size":"12px"
+                        },
+                        "plotarea":{
+                            "margin":"50 auto auto auto"
+                        },
+                        "options":{
+                            "max-items":20,
+                            "font-family":"Arial",
+                            "rotate":true,
+                            "min-length":4,
+                            "min-font-size":"9px",
+                            "max-font-size":"30px",
+                            "color-type":"palette",
+                            "palette":["#57aa83","#c13f43","#2c497d","#8965ad","#686d7b","#fd625e","#d7d7d9","#2e67c6"],
+                            "ignore":["para", "de"],
+                            "text":"proatividade, comunicação, determinação, dedicação, disposição para esforço, engajamento, foco, motivada, organização, responsável, bom trabalho em equipe, detalhista, atenciosa, liderança, empatia"
+                        }
+                    },
+                    {
+                        "type":"wordcloud",
+                        "x":"51%",
+                        "y":"0%",
+                        "width":"50%",
+                        "height":"100%",
+                        "background-color":"#F2F3F8",
+                        "title":{
+                            "text":"Pontos Fracos",
+                            "y":"5%",
+                            "background-color":"none",
+                            "font-size":"16px",
+                            "font-color":"#000000"
+                        },
+                        "subtitle":{
+                            "text":"Segundo questionários",
+                            "y":"12%",
+                            "background-color":"none",
+                            "font-size":"12px"
+                        },
+                        "plotarea":{
+                            "margin":"50 auto auto auto"
+                        },
+                        "options":{
+                            "max-items":20,
+                            "font-family":"Arial",
+                            "rotate":true,
+                            "min-length":4,
+                            "min-font-size":"9px",
+                            "max-font-size":"30px",
+                            "color-type":"palette",
+                            "palette":["#57aa83","#c13f43","#2c497d","#8965ad","#686d7b","#fd625e","#d7d7d9","#2e67c6"],
+                            "ignore":["com" , "o", "para", "de"],
+                            "text":" ansiedade, insegurança, vergonha, preocupação com o julgamento dos outros, perfeccionista, depressão, , timidez, estresse,"
+                        }
+                    }
+                ]
+            }
+             
+            ;
+             
+            zingchart.render({ 
+                id : 'myChart', 
+                data : myConfig, 
+                height: 500, 
+                width: 725 
+            });
+        </script>
+    </body>
+</html>
