@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    </head>
+    <body>
+        <h1>Maior nível de formação em computação</h1>
+        <div id='myChart'></div>
+        <script type="text/javascript">
+          var myConfig = {
+            type: "treemap", 
+            options: {
+              aspectType: "palette",
+              "max-children":[4,4,4],
+              "tooltip-box":{
+                "text":"%value mulheres com nível de %text "
+                  }
+            },
+            series : [
+              {
+                text: "GRADUAÇÃO",
+                value: 167.00,
+                "data-catagory":"graduated",
+                  box:{
+                    fontSize:20
+                  },
+                children: [
+                  {
+                    text: "Sistemas de informação",
+                    value: 77.00,
+                    "data-catagory":"graduated",
+                  },
+                  {
+                    text:"Ciência da Computação",
+                    value: 54.00,
+                    "data-catagory":"graduated",
+                    },
+                    {
+                       text:"Engenharia da Computação",
+                       value: 15.00,
+                       "data-catagory":"graduated",
+                    },
+                    {
+                       text:"Outros",
+                       value: 21.00,
+                       "data-catagory":"graduated",
+                       children: [
+                           {
+                             text: "outro outro",
+                             value: 312.00,
+                             "data-catagory":"Housing"
+                           },
+                           {
+                             text: "outro 2",
+                             value: 89.00,
+                             "data-catagory":"Housing"
+                           }
+                         ]
+                    }
+                ]
+              },
+              {
+                text: "TÉCNICO",
+                value: 5.00,
+                "data-catagory":"tecnic",
+              },
+              {
+                text:"PÓS GRADUAÇÃO",
+                value: 97.00,
+                "data-catagory":"pos-graduated"
+                
+              },
+              {
+                text:"Não tenho formação",
+                value: 9.00,
+                "data-catagory":"not"
+                
+              }]};
+           
+          zingchart.render({ 
+            id : 'myChart', 
+            data : myConfig, 
+            height: 500, 
+            width: 725,
+            hideprogresslogo: true,
+            output: 'canvas'
+          });
+        </script>
+    </body>
+</html>
